@@ -1,0 +1,77 @@
+
+\documentclass{article}
+\usepackage[landscape, margin=1cm]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{fdsymbol}
+\usepackage{amsmath,amssymb}
+
+%added on 
+\usepackage[document]{ragged2e}
+
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{ mathrsfs }
+\makeatletter
+
+\makeatother
+
+
+
+
+% \advance\topmargin-.9in
+% \advance\textheight3in
+% \advance\textwidth3in
+% \advance\oddsidemargin-1.5in
+% \advance\evensidemargin-1.5in
+% \parindent0pt
+% \parskip2pt
+
+
+% --------------- Custom Commands-------------------
+% Laplace
+\newcommand{\Laplace}{\mathcal{L}}
+% Remove List Spacing
+\newcommand{\header}[1]{\vspace{5pt}\textbf{\emph{#1}}\\ }
+\setlist{leftmargin =.7cm,noitemsep}
+% Evaluate At 
+\newcommand*\Eval[3]{\left.#1\right\rvert_{#2}^{#3}}
+% integration
+\newcommand{\integrate}{\displaystyle\int}
+% summation
+\newcommand{\summate}{\sum\limits}
+% Center equations
+\newcommand{\centerEqn}[1]{\begin{center}\vspace{-5pt} #1 \vspace{-5pt}\end{center}}
+% center line
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+% centered image
+\newcommand*\addimage[2]{\vspace{-8pt}\begin{center}
+    \includegraphics[width=#1in]{images/#2}\end{center}\vspace{-8pt}}
+\newcommand{\sectiontitle}[1]{\paragraph{#1} \ \\} 
+
+\begin{document}
+\pagenumbering{gobble}
+% \begin{center}{\large{\textbf{MTE 321 Formula Sheet}}}\\
+% \end{center}
+\begin{multicols*}{3}
+
+
+\scriptsize{
+%------------ Content ---------------
+\input{content/general}
+\input{content/review.tex}
+\input{content/static-failure.tex}
+\input{content/faigue.tex}
+}
+\end{multicols*}
+
+\end{document}
+
+

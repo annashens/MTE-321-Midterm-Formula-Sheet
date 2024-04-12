@@ -1,0 +1,70 @@
+\sectiontitle{Static Failure in Ductile Materials}
+\header{Maximum Normal Stress (Coulomb) Theory}
+\vspace{-3pt}
+\begin{equation*}
+    |\sigma|_{max} = \frac{Sy}{n}
+\end{equation*}
+\header{Maximum Shearing Stress (Tresca) Theory}\vspace{-12pt}
+\begin{align*}
+    \tau_{max} = \frac{S_{sy}}{n} \text{  where  } S_{sy}=\frac{S_y}{2}
+\end{align*}
+For the 2D case $\sigma_1\geq\sigma_2$ and $\sigma_3=0$
+        \[2(\tau_{max})= \begin{cases} 
+              \sigma_1 & \text{when }\sigma_1 \geq \sigma_2 \geq 0\\
+                \sigma_2 - \sigma_1 & \text{when } \sigma_1 \geq 0 \geq \sigma_2\\
+                \sigma_1 & \text{when } 0\geq \sigma_1 \geq \sigma_2
+           \end{cases}
+        \]\\
+Special 2D Case (shortcut w/ plane stress):
+\begin{equation*}
+    \sqrt{\sigma^2+4\tau^2}=\frac{S_y}{n}
+\end{equation*}
+\header{Von Mises}
+
+Most widely used theory for ductile materials
+    $S_{sy} = \frac{S_y}{\sqrt{3}}$
+    \begin{enumerate}
+        \item 3D Case
+        \begin{align*}
+            \sqrt{\frac{1}{2}(\sigma_1-\sigma_2)^2+(\sigma_1-\sigma_3)^2+(\sigma_2-\sigma_3)^2}= \frac{S_y}{n}
+        \end{align*}
+        \item 2D Case ($\sigma_3 = 0$)
+        \vspace{-10pt}
+        \begin{align*}
+            \sqrt{\sigma_1^2-\sigma_1\sigma_2+\sigma_2^2}= \frac{S_y}{n}
+        \end{align*}
+        Special 2D Case
+        \vspace{-10pt}
+        \begin{align*}
+            \sqrt{\sigma^2+3\tau^2}=\frac{S_y}{n}
+        \end{align*}
+    \end{enumerate}
+
+
+
+%------------------------------------------------
+\sectiontitle{Static Failure in Brittle Materials}
+
+
+\header{Maximum Normal Stress Theory for Brittle Materials}
+\vspace{-10pt}
+\begin{align*}
+    \sigma_1 = \frac{S_{ut}}{n}\ \text{or}\ \sigma_1=-\frac{S_{uc}}{n}\  \text{or} \ \sigma_2=\frac{S_{ut}}{n}\ \text{or} \ \sigma_2=-\frac{S_{uc}}{n}
+\end{align*}
+\header{Coulomb-Mohr Yield Criterion}
+Recall the eqn of a line with y-int $b$ and x-int $a$: $\frac{x}{a}+\frac{y}{b} = 1$
+\begin{align*}
+    \sigma_A&=\frac{S_{ut}}{n}, &\sigma_A\geq \sigma_B \geq 0\\
+    \frac{\sigma_A}{S_{ut}}-\frac{\sigma_A}{S_{uc}}&=\frac{1}{n}, &\sigma_A\geq  0\geq \sigma_B\\
+    \sigma_B&=-\frac{S_{uc}}{n}, &0\geq \sigma_A\geq \sigma_B 
+\end{align*}
+\header{Modified Mohr Yield Criterion}
+\vspace{-12pt}
+\begin{align*}
+    \sigma_A&=\frac{S_{ut}}{n} &\sigma_A \geq \sigma_B \geq 0 \\
+     &&\sigma_A \geq 0 \geq \sigma_B\text{  and  } \left|\frac{\sigma_B}{\sigma_A}\right|\leq 1\\
+    \frac{(S_{uc}-S_{ut})\sigma_A}{S_{uc}S_{ut}}-\frac{\sigma_B}{S_{uc}}&=\frac{1}{n} &\sigma_A \geq 0 \geq \sigma_B\text{  and  }\left|\frac{\sigma_B}{\sigma_A}\right|> 1\\
+    \sigma_B &=-\frac{S_{uc}}{n} &0\geq \sigma_A \geq \sigma_B
+    \end{align*}
+\header{Stress Concentration Factor}
+Multiply stresses by $K_t$ when dealing with a brittle material

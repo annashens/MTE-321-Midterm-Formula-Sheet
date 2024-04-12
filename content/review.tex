@@ -1,0 +1,65 @@
+
+\sectiontitle{Types of Loading}
+\vspace{-5pt}
+\begin{enumerate}
+    \item Axial Force: $\sigma = \displaystyle\frac{F}{A}$
+    \item Torsion: $\tau = \displaystyle\frac{T\rho}{J}$\\
+    Common Polar MOIs and MOIs
+    \begin{enumerate}
+        \item Circular Cross Section: $J=\frac{\pi}{2}r^4$ \,%,\,$I = \frac{\pi}{4}r^4$
+        \item Circular Tube Cross Section: $J=\frac{\pi}{2}(r_o^4-r_i^4)$ 
+        \item Rectangular Cross Section: $J = \frac{bh}{12}(b^2+h^2)$ \,%,\,$I = \frac{1}{12}bh^3$
+    \end{enumerate}
+    Max Shear due to Torsion (occurs at $\rho=r$)
+    \begin{equation*}
+        \tau_{max}=\frac{2T}{\pi r^3}=\frac{16T}{\pi d^3}
+    \end{equation*}
+    \item Bending Moment $\sigma = \displaystyle\frac{Mc}{I}$
+    \begin{itemize}
+        \item $M$ \& $I$ indices are the same
+        \item System of coordinates: (1) through centroid, along length (2) along cross section axis of symmetry (3) RHR
+    \end{itemize}
+    Max Bending Stress for Circular Cross Section
+    \begin{equation*}
+        \sigma_{max}=\frac{4M}{\pi r^3}=\frac{32 M}{\pi d^3}
+    \end{equation*}
+    \item Shear Force (negligible in beams): $        \tau_{xy} = \displaystyle \frac{V_yQ_z}{I_z t}$\\
+    Max Shear due to Shear Force
+    \begin{enumerate}
+        \item Rectangular cross section $\tau_{max} =\frac{3}{2}\frac{V}{A}$
+        \item Circular Cross Section: $\tau_{max} = \frac{4}{3}\frac{V}{A}$
+    \end{enumerate}
+\end{enumerate}
+\sectiontitle{Combined Loading}
+\header{Shear Force and Bending Moment Diagram}
+\begin{align*}
+    V=\frac{dM}{dX}\Longrightarrow \int_{x_1}^{x_2} V  dx + C = M
+\end{align*}
+\begin{itemize}
+    \item Orient axis such that the third axis points out of the page
+\end{itemize}
+\header{Mohr's Circle}
+Set Up:
+\begin{enumerate}
+    \item Points $A(\sigma_x,\ -\tau_{xy})$ and $B(\sigma_y,\ +\tau_{xy})$
+    \begin{itemize}
+        \item  CW $\Rightarrow $ $+\tau$, CCW $\Rightarrow $ $-\tau$
+    \end{itemize}
+    \item Mid Stress $\bar{\sigma} = \frac{\sigma_x+\sigma_y}{2}$
+\end{enumerate}
+Values:
+\begin{enumerate}
+        \item Principle Directions ($\theta_p\rightarrow\sigma_{max}$ and $\theta_s\rightarrow\tau_{max}$)
+        \begin{align*}
+            \tan(2\theta_p) = \frac{\tau_{xy}}{\sigma_{x} -\bar{\sigma}}= \frac{2\,\tau_{xy}}{\sigma_{x} -\sigma_{y}},  \hspace {5pt} \theta_s = 45\degree -\theta_p
+        \end{align*}
+        \item Principle Stresses (occur when $\tau=0$)
+        \begin{equation*}
+            \sigma_{max/min} = \bar{\sigma}\pm R=\bar\sigma \pm \sqrt{\left(\sigma_x-\bar\sigma \right)^2+\tau_{xy}^2}
+        \end{equation*}
+        \item Principle Shear Stress (also $R$ of Mohr's circle)
+        \begin{equation*}
+            \tau_{max}=\pm R =\sqrt{\left(\sigma_x-\bar\sigma \right)^2+\tau_{xy}^2}
+        \end{equation*}
+    \end{enumerate}
+
